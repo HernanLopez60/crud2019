@@ -109,7 +109,18 @@ public class MainActivity extends AppCompatActivity{
         try {
             Intent intent = getIntent();
             Bundle bundle = intent.getExtras();
+            if (bundle != null) {
 
+                senal = bundle.getString("senal");
+                codigo = bundle.getString("codigo");
+                descripcion = bundle.getString("descripcion");
+                precio = bundle.getString("precio");
+                if (senal.equals("1")) {
+                    et_codigo.setText(codigo);
+                    et_descripcion.setText(descripcion);
+                    et_precio.setText(precio);
+                    //finish();
+                }else if(senal.equals("2")){
 
                 }
             }
