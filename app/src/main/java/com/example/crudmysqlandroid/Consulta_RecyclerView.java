@@ -132,7 +132,11 @@ public class Consulta_RecyclerView extends AppCompatActivity {
                                 Productos objeto = new Productos(codigo, descripcion, precio, img);
                                 productosList.add(objeto);*/
 
-
+                                productosList.add(new Productos(
+                                        articulosObject.getInt("codigo"),
+                                        articulosObject.getString("descripcion"),
+                                        articulosObject.getDouble("precio"),
+                                        articulosObject.getString("imagen")
                                 ));
                             }
 
